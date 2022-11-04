@@ -6,5 +6,11 @@ module.exports = () => {
     // eslint-disable-next-line no-undef
     response.render('pages/gallery', { pageTitle: 'Gallery' });
   });
+
+  router.get('/:shortname', (request, response) => {
+    // eslint-disable-next-line no-undef
+    response.send(`Detail page of ${request.params.shortname}`);
+  });
+
   return router;
 };
